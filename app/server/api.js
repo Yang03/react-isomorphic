@@ -3,9 +3,9 @@ import {encText, decText } from  './util/encrypt'
 import aes from 'aes-cross'
 import crypto from 'crypto'
 
-const baseUrl = ''
-const appKey = ''
-const appId = ''
+const baseUrl = 'http://120.55.247.39:8080/servicefactory'
+const appKey = 'sut8DmyokeDixx2J'
+const appId = '100012'
 
 
 function sign() {
@@ -73,6 +73,7 @@ function formatCategires (data) {
 	let arr = []
 	data.map((value, index) => {
 		if (value.data.code == 200) {
+
 			let temp = sortBykey(value.data.data, 'order')
 			arr[index] = temp
 		} else {
