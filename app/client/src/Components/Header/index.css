@@ -1,0 +1,224 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+ul, li {
+	list-style: none
+}
+
+header {
+	width: 100%;
+	height: 45px;
+	background: #F1BB18;
+	overflow: hidden;
+}
+
+.logo i {
+	width: 50px;
+	height: 26px;
+	display: block;
+	margin: 10px;
+	text-indent: -999em;
+	white-space: nowrap;
+	overflow: hidden;
+	background: url("http://s.baixing.net/img/wap/icon_bx_logo.png") no-repeat;
+	background-size: 50px 26px;
+	float: left;
+
+}
+
+header > .title {
+	display: inline-block;
+	line-height: 18px;
+	margin: 18px 0;
+	padding-left: 10px;
+	font-size: 16px;
+	color: #fff;
+	border-left: 1px solid #fff;
+}
+
+.search-box {
+	width: 96%;
+	margin: 15px auto 15px auto;
+}
+
+.search-box input {
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #F1BB18;
+	border-radius: 2px;
+	padding-left: 45px;
+	background: url("http://file.baixing.net/201605/27c15e73e6bc5c154aa6e41898e80655.png") 10px center no-repeat;
+}
+
+.banner-box img {
+	width: 100%;
+	overflow: hidden;
+	vertical-align: bottom;
+}
+
+main > .title {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background: #F2F2EF;
+	text-align: center;
+	color: #999;
+	font-size: 14px
+}
+
+.pledge > ul > li {
+	width: 33.3%;
+	float: left;
+	text-align: center;
+}
+
+.pledge ul li::before {
+	content: "";
+	display: block;
+	width: 38px;
+	height: 60px;
+	margin: 0 auto;
+	background-image: url("http://file.baixing.net/201606/934c986afd3d5421d172961f9bd7f963.png");
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+
+.brand-box {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.brand-box ul li {
+	padding: 12px 2%;
+	border-bottom: 1px solid #D0D0D0;
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	height:80px;
+	width: 96%;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.brand-box ul li a {
+	color:#4A4A4A;
+	text-decoration:none;
+	display:inline-block;
+	-webkit-flex:1;
+	flex:1;
+}
+
+.brand-box ul li i {
+	width: 72px;
+	height: 60px;
+	display: inline-block;
+	font-style: normal;
+	text-align: center;
+}
+
+.brand-box ul li i::before {
+	content: "";
+	display: block;
+	width: 72px;
+	height: 64px;
+	background-image: url("http://file.baixing.net/201606/934c986afd3d5421d172961f9bd7f963.png");
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+
+.brand-box ul li div.brand-btn-group{
+	-webkit-flex:initial;
+	flex:initial;
+	width:75%;
+	display:inline-block;
+	overflow:hidden;
+}
+
+.brand-box ul li .brand-btn-group .btn{
+	width:42%;
+	border: 1px solid #CECECE;
+	color: #676767;
+	display: inline-block;
+	border-radius: 5px;
+	margin-bottom:4px;
+	margin-left: 10px;
+	padding: 0 5px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 36px;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	height:36px;
+
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.brand-box ul li .brand-btn-group .btn:nth-child(n+3){
+	margin-bottom:0px;
+}
+
+.brand-box ul li .brand-btn-group .btn:focus{
+	background:white;
+}
+
+.brand-box ul li .brand-btn-group .btn.all{
+	background:#E4E4E4;
+}
+
+[data-type='手机'] i::before {
+	background-position: 5px 0;
+}
+
+[data-type='平板电脑'] i::before {
+	background-position: -65px 0;
+}
+
+[data-type='笔记本'] i::before {
+	background-position: -130px 0;
+}
+
+[data-type='单反相机'] i::before {
+	background-position: -65px -65px;
+}
+
+[data-type='智能数码'] i::before {
+	background-position: 0 -65px;
+}
+
+[data-type='镜头'] i::before {
+	background-position: -130px -65px;
+}
+
+.pledge ul li:nth-child(1)::before {
+	background-position: -15px -135px;
+}
+
+.pledge ul  li:nth-child(2)::before {
+	background-position: -81px -135px;
+}
+
+.pledge ul  li:nth-child(3)::before {
+	background-position: -148px -135px;
+}
+
+.pledge {
+	margin-bottom: 20px
+}
+
+.clearfix::after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.swiper-container a img {
+	width:100%
+}

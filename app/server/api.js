@@ -3,9 +3,9 @@ import {encText, decText } from  './util/encrypt'
 import aes from 'aes-cross'
 import crypto from 'crypto'
 
-const baseUrl = 'http://120.55.247.39:8080/servicefactory'
-const appKey = 'sut8DmyokeDixx2J'
-const appId = '100012'
+const baseUrl = ''
+const appKey = ''
+const appId = ''
 
 
 function sign() {
