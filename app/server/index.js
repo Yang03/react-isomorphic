@@ -10,12 +10,14 @@ import bodyParser from 'koa-bodyparser'
 import notFound from './middlewares/notFound'
 import devConfig from '../client/webpack.dev'
 import webpack from 'webpack'
+import path from 'path'
 import {devMiddleware, hotMiddleware} from 'koa-webpack-middleware'
 
 const dev = process.env.NODE_ENV != 'production'
 
 const app = new Koa()
-
+console.log('---->' + process.env.NODE_ENV)
+console.log(process.env.IS_SEREVER)
 const templatePath = __dirname + '/template/'
 //console.log(templatePath);
  app.use(views(templatePath, { extension: 'ejs' }))
@@ -38,9 +40,9 @@ app.use(hotMiddleware(compile, {
 	}))
 }
 
-app.use(serve(__dirname + '../../client/'))
+app.use(serve(path.resolve(__dirname ,  '../client')))
 
-const middlewares = compose([
+const middlewares = convert.compose([
 	//favicon(__dirname + '/favicon.ico'),
 	bodyParser({formLimit: '5mb'}),
 	notFound(),

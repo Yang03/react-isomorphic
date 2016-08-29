@@ -5,8 +5,10 @@ import { Provider } from 'react-redux'
 import configureStore from '../../client/src/Store/configureStore'
 const store = configureStore()
 
-console.log(process.env.IS_BROWSER)
+//console.log(process.env.IS_BROWSER)
 export default async (ctx, next, renderProps) => {
+
+	//console.log(''------->)
 	const route = renderProps.routes[renderProps.routes.length - 1]
 	var prefetchTasks = []
 	for (let component of renderProps.components) {
@@ -22,12 +24,16 @@ export default async (ctx, next, renderProps) => {
 			}
 		}
   }
-//console.log(prefetchTasks, '5555')
 
-  await Promise.all(prefetchTasks)
-  await ctx.render('index', {
+  try {
+	 await Promise.all(prefetchTasks)
+ }	catch(e) {
+	 console.log(e)
+ }
+
+  return await ctx.render('index', {
 	title: 'test',
-	dev: ctx.app.env === 'development',
+	production: ctx.app.env === 'production',
 	reduxData: store.getState(),
 	app: renderToString(
 		<Provider store={store}>
