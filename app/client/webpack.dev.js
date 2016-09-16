@@ -23,20 +23,6 @@ module.exports = {
 		main: [
 			path.resolve(__dirname, 'src/main.js'),
 			'webpack-hot-middleware/client?path=/dist/__webpack_hmr&timeout=20000',
-		],
-		_vendor: [
-			'react',
-			'react-dom',
-			'react-router',
-			'redux',
-			'react-redux',
-			'react-router-redux',
-			'redux-form',
-			'moment',
-			'immutable',
-			'axios',
-			'es6-promise',
-			'classnames',
 		]
 	},
 
@@ -64,7 +50,7 @@ module.exports = {
 
 	resolve: {
 		modulesDirectories: [
-			'src',
+			'server',
 			'node_modules'
 		],
 		extensions: ['', '.js', '.jsx', '.json']
@@ -77,7 +63,6 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.WatchIgnorePlugin([/\.json$/]),
 		new webpack.NoErrorsPlugin(),
-		new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn/),
 		new webpack.optimize.CommonsChunkPlugin('_vendor', 'vendor.js'),
 		new NpmInstallPlugin({
 			save: true,
