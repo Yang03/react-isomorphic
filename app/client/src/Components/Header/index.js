@@ -1,9 +1,11 @@
-import React from 'react'
-if (process.env.IS_SEREVER) {
+import React, { Component} from 'react'
+
+const IS_SERVER = typeof window === 'undefined';
+if(!IS_SERVER) {
   	require('./index.css')
 }
 
-export default class Header extends React.Component {
+class Header extends Component {
 	render() {
 		return(
 			<main>
@@ -22,3 +24,5 @@ export default class Header extends React.Component {
 		)
 	}
 }
+
+export default Header
